@@ -1,0 +1,79 @@
+{
+	"common": {
+		"name": "kettleredmond",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "kettleredmond",
+		"titleLang": {
+			"en": "kettleredmond",
+			"de": "Kettleredmond",
+			"ru": "kettleredmond",
+			"pt": "Kettleredmond",
+			"nl": "kettleredmond",
+			"fr": "kettleredmond",
+			"it": "kettleredmond",
+			"es": "Kettleredmond",
+			"pl": "Czajnik",
+			"zh-cn": "水壶雷德蒙德"
+		},
+		"desc": {
+			"en": "kettleredmond",
+			"de": "Kettleredmond",
+			"ru": "kettleredmond",
+			"pt": "Kettleredmond",
+			"nl": "kettleredmond",
+			"fr": "kettleredmond",
+			"it": "kettleredmond",
+			"es": "Kettleredmond",
+			"pl": "Czajnik",
+			"zh-cn": "水壶雷德蒙德"
+		},
+		"authors": [
+			"chaifist <tvv2000@hotbox.ru>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "kettleredmond.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/chaifist/ioBroker.kettleredmond/master/admin/kettleredmond.png",
+		"readme": "https://github.com/chaifist/ioBroker.kettleredmond/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "household",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
