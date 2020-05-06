@@ -36,9 +36,10 @@ class Kettleredmond extends utils.Adapter {
 
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
-		this.log.info("config option1: " + this.config.option1);
-		this.log.info("config option2: " + this.config.option2);
-
+		this.log.info("config device: " + this.config.device);
+		this.log.info("config mac: " + this.config.mac);
+		this.log.info("config password: " + this.config.password);
+		this.log.info("config timedelay: " + this.config.timedelay);
 		/*
 		For every state in the system there has to be also an object of type state
 		Here a simple template for a boolean variable named "testVariable"
