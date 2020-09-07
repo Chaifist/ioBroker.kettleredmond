@@ -26,7 +26,7 @@ const handleData = data => console.log(`[onData] ←${data}`);
 (async function() {
   gatttool.start({ onData: handleData, stream: ble });
  
-  const btAddress = this.config.mac);
+  const btAddress = this.config.mac;
  
   if (btAddress) {
     this.log.info("config mac: " + this.config.mac);
