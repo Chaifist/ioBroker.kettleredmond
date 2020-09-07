@@ -26,10 +26,11 @@ const handleData = data => console.log(`[onData] ←${data}`);
 (async function() {
   gatttool.start({ onData: handleData, stream: ble });
  
-  const btAddress = await gatttool.scanFor("FooBar2");
-  console.log(`Found a BT device at: ${btAddress}`);
+  const btAddress = this.config.mac);
  
   if (btAddress) {
+    this.log.info("config mac: " + this.config.mac);
+
     setTimeout(() => gatttool.write(`connect ${btAddress}`), 500);
     setTimeout(() => gatttool.write("char-desc"), 5000);
     setTimeout(
