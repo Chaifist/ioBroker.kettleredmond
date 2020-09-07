@@ -7,10 +7,10 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
+const gatttool = require("gatttool");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
-const gatttool = require("gatttool");
 const { Writable } = require("stream");
  
 const ble = new Writable({
