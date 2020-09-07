@@ -10,6 +10,35 @@ const utils = require("@iobroker/adapter-core");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
+const gatttool = require("gatttool");
+const { Writable } = require("stream");
+ 
+const ble = new Writable({
+  objectMode: true,
+  write: (data, encoding, done) => {
+    console.log(`[stream] ←${data.toString(encoding)}`);
+    done();
+  }
+});
+ 
+const handleData = data => console.log(`[onData] ←${data}`);
+ 
+(async function() {
+  gatttool.start({ onData: handleData, stream: ble });
+ 
+  const btAddress = await gatttool.scanFor("FooBar2");
+  console.log(`Found a BT device at: ${btAddress}`);
+ 
+  if (btAddress) {
+    setTimeout(() => gatttool.write(`connect ${btAddress}`), 500);
+    setTimeout(() => gatttool.write("char-desc"), 5000);
+    setTimeout(
+      () => gatttool.write("char-write-cmd 0x0012 4e4f44454a53"),
+      10000
+    );
+    setTimeout(() => gatttool.write("exit"), 15000);
+  }
+})();
 
 class Kettleredmond extends utils.Adapter {
 
