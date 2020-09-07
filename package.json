@@ -19,7 +19,8 @@
     "url": "https://github.com/chaifist/ioBroker.kettleredmond"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.3.1"
+    "@iobroker/adapter-core": "^2.3.1",
+    "gatttool": "^1.0.1"
   },
   "devDependencies": {
     "@iobroker/testing": "^2.2.0",
